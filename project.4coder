@@ -1,0 +1,49 @@
+project_name = "4col";
+
+patterns = {
+	"*.c",
+	"*.h",
+	"*.cpp",
+	"*.hpp",
+};
+
+load_paths = {
+	{
+		{ {"."}, .recursive = true, .relative = true },
+		.os = "win"
+	},
+};
+
+command_list = {
+	{
+		.name = "build",
+		.out = "*compilation*",
+		.footer_panel = true,
+		.cursor_at_end = true,
+		.save_dirty_files = true,
+		.cmd =  {
+			{ "build.bat", .os = "win" },
+		},
+	},
+	{
+		.name = "kill_compilation",
+		.footer_panel = false,
+		.cmd = {
+			{ "taskkill /F /IM cl.exe", .os = "win" },
+		},
+	},
+	{
+		.name = "run",
+		.footer_panel = false,
+		.out = "*run*",
+		.footer_panel = true,
+		.cursor_at_end = true,
+		.cmd = {
+			{ "4col.exe", .os = "win" },
+		},
+	}
+};
+
+fkey_command[3] = "build";
+fkey_command[4] = "kill_compilation";
+fkey_command[6] = "run";
