@@ -137,7 +137,7 @@ namespace wal
         // string background
         write_entry(defcolor_highlight, hca(scheme[10], 0x33));
         // string
-        write_entry(defcolor_at_highlight, hc(scheme[8]));
+        write_entry(defcolor_at_highlight, hca(scheme[8], 0x33));
         // mark
         // UPDATE!!!!
         write_entry(defcolor_mark, hc(scheme[0]));
@@ -171,7 +171,7 @@ namespace wal
         // highlight junk
         write_entry(defcolor_highlight_junk, hc(scheme[3]));
         // highlight white
-        write_entry(defcolor_highlight_white, hc(scheme[7]));
+        write_entry(defcolor_highlight_white, hca(scheme[7], 0x40));
         // paste
         write_entry(defcolor_paste, hc(scheme[7]));
         // undo
@@ -272,7 +272,7 @@ namespace wal
 // 0 - gruvbox dark (credits: @dawikur on GitHub)
 // 1 - nord (credits: @ada-lovelace on GitHub)
 // 2 - your own input scheme
-#define COLOR 0
+#define COLOR 1
 
 #if COLOR == 0
 unsigned scheme[16] = 
