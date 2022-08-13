@@ -147,7 +147,7 @@ namespace wal
         // comment
         write_entry(defcolor_comment, hca(scheme[8], 0xb0));
         // comment pops
-        write_entry(defcolor_comment_pop, hc(scheme[1]), hc(scheme[7]));
+        write_entry(defcolor_comment_pop, hc(scheme[7]));
         // keyword
         write_entry(defcolor_keyword, hc(scheme[14]));
         // string constant
@@ -272,7 +272,7 @@ namespace wal
 // 0 - gruvbox dark (credits: @dawikur on GitHub)
 // 1 - nord (credits: @ada-lovelace on GitHub)
 // 2 - your own input scheme
-#define COLOR 1
+#define COLOR 2
 
 #if COLOR == 0
 unsigned scheme[16] = 
@@ -318,22 +318,22 @@ unsigned scheme[16] =
 // input here
 unsigned scheme[16] = 
 {
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
-    0xff,
+    0xff000000,
+    0xff121212,
+    0xff222222,
+    0xff333333,
+    0xff999999,
+    0xffc1c1c1,
+    0xff999999,
+    0xffc1c1c1,
+    0xff5f8787,
+    0xffaaaaaa,
+    0xff5f81a5,
+    0xffd0dfee,
+    0xffaaaaaa,
+    0xff888888,
+    0xff999999,
+    0xff444444,
 };
 #endif
 
