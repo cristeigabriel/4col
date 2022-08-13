@@ -188,7 +188,6 @@ namespace wal
         write_entry(defcolor_line_numbers_text, hc(scheme[1]));
         
         // FLEURY
-        
         // cursor
         // inactive
         write_entry(fleury_color_cursor_inactive, hc(scheme[1]));
@@ -212,10 +211,10 @@ namespace wal
         // username
         write_entry(fleury_color_comment_user_name, hc(scheme[15]));
         // error
-        write_entry(fleury_color_error_annotation, hca(scheme[4], 0x22));
+        write_entry(fleury_color_error_annotation, hc(scheme[4]));
         // warning
         // NOTE(para): this is only in my fleury's layer fork presumably
-        write_entry(fleury_color_warning_annotation, hca(scheme[1], 0x22));
+        write_entry(fleury_color_warning_annotation, hc(scheme[1]));
         // syntax
         write_entry(fleury_color_syntax_crap, hc(scheme[11]));
         // operators
